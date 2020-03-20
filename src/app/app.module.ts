@@ -14,6 +14,7 @@ import { WelcomePageComponent } from './dashboard/welcome-page/welcome-page.comp
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './dashboard/contact/contact.component';
+import { FooterComponent } from './menu/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './dashboard/contact/contact.component';
     ProductComponent,
     ActivitiesComponent,
     WelcomePageComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
