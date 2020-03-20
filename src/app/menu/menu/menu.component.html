@@ -1,0 +1,24 @@
+<div class="menu">
+    <button mat-button (click)="welcomePage()"> <h1>JUST_FIT</h1></button>
+
+</div>
+<hr>
+<div class="menu">
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item class="menu-item" (click)="welcomePage()">Storna Główna</button>
+        <button mat-menu-item class="menu-item" (click)="activities()">Zajęcia</button>
+        <button mat-menu-item class="menu-item" (click)="equipment()">Sprzet</button>
+        <button mat-menu-item class="menu-item" (click)="product()">Oferta</button>
+        <button mat-menu-item class="menu-item" (click)="employees()">Pracownicy</button>
+    </mat-menu>
+    <button mat-button class="webClient" (click)="webClient()">Strefa Klienta</button>
+</div>
+<div class="menu-benefit-card">
+    <h3>W naszym klubie honorujemy karty:
+        <ul class="benefit-card_list">
+            <li><img src="assets/fitprofit.png"></li>
+            <li><img src="assets/multisport.png"></li>
+        </ul>
+    </h3>
+</div>
