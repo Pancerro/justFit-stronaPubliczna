@@ -11,7 +11,7 @@ export class EmployeesComponent implements OnInit {
   constructor(private titleService:Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle("Pracownicy");
+    this.titleService.setTitle("JF_Pracownicy");
   }
 
 }

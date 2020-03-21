@@ -11,7 +11,7 @@ export class EquipmentComponent implements OnInit {
   constructor(private titleService:Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle("Sprzęt");
+    this.titleService.setTitle("JF_Sprzęt");
   }
 
 }

@@ -11,9 +11,10 @@ export class ContactComponent implements OnInit {
 
   constructor(private titleService:Title,
     private router: Router) { }
-
+    col:number=5;
   ngOnInit() {
-    this.titleService.setTitle("Kontakt");
+    this.titleService.setTitle("JF_Kontakt");
+    if(window.innerWidth<900) this.col=2;
   }
 
   welcomePage():void{

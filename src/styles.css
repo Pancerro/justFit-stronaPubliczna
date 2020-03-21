@@ -21,6 +21,12 @@ footer {
     width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+    footer {
+        display: none;
+    }
+}
+
 a {
     text-decoration: none;
     color: white;

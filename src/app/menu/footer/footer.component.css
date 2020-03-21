@@ -1,0 +1,11 @@
+@media screen and (max-width: 750px) {
+    .add-info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .basic-info {
+        margin-top: 10px;
+    }
+}

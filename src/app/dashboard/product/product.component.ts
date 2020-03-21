@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
   constructor(private titleService:Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle("Oferta");
+    this.titleService.setTitle("JF_Oferta");
   }
 
 }

@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './dashboard/contact/contact.component';
 import { FooterComponent } from './menu/footer/footer.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './menu/footer/footer.component';
     MatButtonModule,
     MatGridListModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
