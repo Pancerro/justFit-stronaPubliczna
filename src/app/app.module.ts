@@ -16,6 +16,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './dashboard/contact/contact.component';
 import { FooterComponent } from './menu/footer/footer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
