@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-product',
@@ -8,10 +9,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title,
+    private dataService:DataServiceService) { }
 
   ngOnInit() {
     this.titleService.setTitle("JF_Oferta");
+    this.dataService.getProduct().subscribe(res=>{})
   }
 
 }

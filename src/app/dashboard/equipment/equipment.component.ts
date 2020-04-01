@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-equipment',
@@ -8,10 +9,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class EquipmentComponent implements OnInit {
 
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title,
+    private dataService:DataServiceService) { }
 
   ngOnInit() {
     this.titleService.setTitle("JF_Sprzęt");
+    this.dataService.getEquipment().subscribe(res=>{});
   }
   imageObject: Array<object> = [{
     image: 'assets/equipment/1.jpg',

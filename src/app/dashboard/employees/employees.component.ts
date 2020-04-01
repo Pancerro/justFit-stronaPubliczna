@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 export class Worker {
   id:number;
@@ -22,12 +23,14 @@ export class Worker {
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title,
+    private dataService:DataServiceService) { }
   worker:Worker;
   workers:Worker[]=[new Worker(0,"assets/workers/women.png","Tyska ","Tyskowicz","he he silownia he he"),new Worker(1,"assets/workers/men.png","Dj Bocian","Lazlo","Siłownia to moja pasja")];
   ngOnInit() {
     this.titleService.setTitle("JF_Pracownicy");
     this.worker=this.workers[0];
+    this.dataService.getEmployess().subscribe(res=>{})
     
   }
   nextWorker(id:number){
