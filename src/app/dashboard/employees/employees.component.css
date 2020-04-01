@@ -1,14 +1,10 @@
-.button-background {
-    width: 100px;
-    height: 100px;
-    background-color: orangered;
-    display: inline-block;
-}
-
-.button-background button {
-    margin-bottom: 10000px;
-}
-
 .photo {
-    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.employees {
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
 }
