@@ -31,6 +31,7 @@ export class WelcomePageComponent implements OnInit {
   constructor(private titleService:Title) { }
 
   ngOnInit() {
+    console.log(window.innerHeight)
     this.titleService.setTitle("JF_Strona Główna");
     for(let i=0;i<this.sizeNews;i++){
       this.news.push(new News("assets/komunikat.png","Awaria","1/1/1","Drdzy przyjaciele"))

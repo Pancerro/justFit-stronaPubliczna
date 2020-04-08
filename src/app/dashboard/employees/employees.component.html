@@ -1,32 +1,19 @@
 <div class="employees">
-
-
-
-
-
-
-
     <h4>Nasza druzyna</h4>
-    <mat-grid-list cols="3" rowHeight="3:1">
-        <mat-grid-tile [colspan]=2 [rowspan]=3>
-
-            <div><button (click)="previousWorker(worker.id)" mat-button><</button></div>
-            <div class="photo">
-                <img src="{{worker.photo}}" layout-fill></div>
-            <div>
-                <button (click)="nextWorker(worker.id)" mat-button>></button>
-            </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <h1>{{worker.name}} {{worker.surname}}</h1>
-        </mat-grid-tile>
-        <mat-grid-tile>
-
-            <p>{{worker.description}}</p>
-        </mat-grid-tile>
+    <h1>
+        <button class="previousWorkerButton" (click)="previousWorker(worker.id)" mat-button>	<mat-icon>arrow_left</mat-icon></button> {{worker?.firstName}} {{worker?.surName}}
+        <button class="nextWorkerButton" (click)="nextWorker(worker.id)" mat-button><mat-icon>arrow_right</mat-icon></button>
+    </h1>
+    <br>
+    <p>Specjalizajca: {{worker?.specialization}}</p>
+    <br>
+    <p>Email: {{worker?.email}}</p>
+    <br>
+    <p>Numer Telefonu: {{worker?.phoneNumber}}</p>
+    <br>
+    <p>Godziny pracy: {{worker?.workingHours}}</p>
 
 
-    </mat-grid-list>
 
 
 </div>

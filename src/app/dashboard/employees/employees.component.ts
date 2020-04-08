@@ -1,22 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DataServiceService } from 'src/app/services/data-service.service';
+import { Worker } from 'src/app/class/worker';
+import { Subscription } from 'rxjs';
 
-export class Worker {
-  id:number;
-  photo:string;
-  name:string;
-  surname:string;
-  description:string;
-  
-  constructor(id:number,photo: string,name: string,surname: string,description: string) {
-    this.id=id;
-    this.photo = photo;
-    this.name= name;
-    this.surname=surname;
-    this.description=description;
-}
-}
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
@@ -26,22 +13,28 @@ export class EmployeesComponent implements OnInit {
   constructor(private titleService:Title,
     private dataService:DataServiceService) { }
   worker:Worker;
-  workers:Worker[]=[new Worker(0,"assets/workers/women.png","Tyska ","Tyskowicz","he he silownia he he"),new Worker(1,"assets/workers/men.png","Dj Bocian","Lazlo","Siłownia to moja pasja")];
+  private workers:Worker[];
+  private subscription:Subscription;
   ngOnInit() {
     this.titleService.setTitle("JF_Pracownicy");
-    this.worker=this.workers[0];
-    this.dataService.getEmployess().subscribe(res=>{})
-    
+    this.subscription=this.dataService.getEmployess().subscribe((worker:Worker[])=>{
+      this.workers=worker
+      this.worker=this.workers[0];
+    })
   }
   nextWorker(id:number){
-    if(id+1==this.workers.length) id=0;
+    id=id-1;
+    if(id==this.workers.length-1) id=0;
     else id++;
     this.worker=this.workers[id]
-
   }
   previousWorker(id:number){
+    id=id-1;
     if(id==0) id=this.workers.length-1;
     else id--;
     this.worker=this.workers[id];
+  }
+  ngOnDestroy(): void {
+    if(this.subscription) this.subscription.unsubscribe();
   }
 }

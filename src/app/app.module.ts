@@ -17,6 +17,8 @@ import { ContactComponent } from './dashboard/contact/contact.component';
 import { FooterComponent } from './menu/footer/footer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { DataServiceService } from './services/data-service.service'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,13 @@ import { NgImageSliderModule } from 'ng-image-slider';
     BrowserAnimationsModule,
     MatButtonModule,
     MatGridListModule,
+    HttpClientModule,
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
     NgImageSliderModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

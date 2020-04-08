@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
 export class FooterComponent implements OnInit {
 
   constructor( private router: Router) { }
-
+  cols:number;
   ngOnInit() {
+    if(window.innerWidth<1000) this.cols=1;
+    else this.cols=2;
   }
   welcomePage():void{
     this.router.navigate(['/strona-głowna']);
