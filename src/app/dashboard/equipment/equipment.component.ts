@@ -9,11 +9,9 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class EquipmentComponent implements OnInit {
 
-  constructor(private titleService:Title,
-    private dataService:DataServiceService) { }
+  constructor( private dataService:DataServiceService) { }
 
   ngOnInit() {
-    this.titleService.setTitle("JF_Sprzęt");
     this.dataService.getEquipment().subscribe(res=>{});
   }
   imageObject: Array<object> = [{

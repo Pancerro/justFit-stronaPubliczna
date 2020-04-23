@@ -10,13 +10,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-  constructor(private titleService:Title,
-    private dataService:DataServiceService) { }
+  constructor(  private dataService:DataServiceService) { }
   worker:Worker;
   private workers:Worker[];
   private subscription:Subscription;
   ngOnInit() {
-    this.titleService.setTitle("JF_Pracownicy");
     this.subscription=this.dataService.getEmployess().subscribe((worker:Worker[])=>{
       this.workers=worker
       this.worker=this.workers[0];

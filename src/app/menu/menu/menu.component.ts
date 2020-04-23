@@ -11,22 +11,24 @@ export class MenuComponent{
    private router: Router
  ) {}
    welcomePage():void{
-    this.router.navigate(['/strona-głowna']);
+    this.router.navigate(['/strona-glowna']);
    }
    activities():void{
-     this.router.navigate(['/zajecia']);
+
+     this.router.navigate(['/strona-glowna']);
    }
    employees():void{
-     this.router.navigate(['/pracownicy']);
+
+     this.router.navigate(['/strona-glowna']);
    }
    equipment():void{
-     this.router.navigate(['/sprzet']);
+     this.router.navigate(['/strona-glowna']);
    }
    product():void{
-    this.router.navigate(['/oferta']);
+    this.router.navigate(['/strona-glowna']);
   }
   contact():void{
-    this.router.navigate(['/kontakt']);
+    this.router.navigate(['/strona-glowna']);
   }
   webClient():void{}
 

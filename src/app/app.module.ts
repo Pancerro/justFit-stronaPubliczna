@@ -10,7 +10,7 @@ import { EmployeesComponent } from './dashboard/employees/employees.component';
 import { EquipmentComponent } from './dashboard/equipment/equipment.component';
 import { ProductComponent } from './dashboard/product/product.component';
 import { ActivitiesComponent } from './dashboard/activities/activities.component';
-import { WelcomePageComponent } from './dashboard/welcome-page/welcome-page.component';
+import { NewsPageComponent } from './dashboard/news-page/news-page.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './dashboard/contact/contact.component';
@@ -19,6 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { DataServiceService } from './services/data-service.service'; 
 import { HttpClientModule } from '@angular/common/http';
+import { MainPageComponent } from './dashboard/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     EquipmentComponent,
     ProductComponent,
     ActivitiesComponent,
-    WelcomePageComponent,
+    NewsPageComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

@@ -16,23 +16,21 @@ export class News {
 }
 
 @Component({
-  selector: 'app-welcome-page',
-  templateUrl: './welcome-page.component.html',
-  styleUrls: ['./welcome-page.component.css']
+  selector: 'app-news-page',
+  templateUrl: './news-page.component.html',
+  styleUrls: ['./news-page.component.css']
 })
 
 
-export class WelcomePageComponent implements OnInit {
+export class NewsPageComponent implements OnInit {
   news:News[]=[];
   clickedNews:News=new News("","","","");
   sizeNews:number=5;
   @ViewChild('sidenav',null) sidenav: MatSidenav;
   allMessage:boolean
-  constructor(private titleService:Title) { }
+  constructor() { }
 
   ngOnInit() {
-    console.log(window.innerHeight)
-    this.titleService.setTitle("JF_Strona Główna");
     for(let i=0;i<this.sizeNews;i++){
       this.news.push(new News("assets/komunikat.png","Awaria","1/1/1","Drdzy przyjaciele"))
     }

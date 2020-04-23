@@ -1,0 +1,60 @@
+<div id="page">
+    <p></p>
+</div>
+<div class="sticky">
+    <div class="menu">
+        <button mat-button (click)="welcomePage()"> <h1>JUST_FIT</h1></button>
+        <hr>
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="menu-item" (click)="welcomePage()">Strona Główna</button>
+            <button mat-menu-item class="menu-item" (click)="activities()">Zajęcia</button>
+            <button mat-menu-item class="menu-item" (click)="equipment()">Sprzet</button>
+            <button mat-menu-item class="menu-item" (click)="product()">Oferta</button>
+            <button mat-menu-item class="menu-item" (click)="employees()">Pracownicy</button>
+            <button mat-menu-item class="menu-item" (click)="contact()">Kontakt</button>
+        </mat-menu>
+        <button mat-button class="webClient" (click)="webClient()">Strefa Klienta</button>
+
+        <div class="menu-benefit-card">
+            <h3>W naszym klubie honorujemy karty:
+                <ul class="benefit-card_list">
+                    <li><img src="assets/fitprofit.png"></li>
+                    <li><img src="assets/multisport.png"></li>
+                </ul>
+            </h3>
+        </div>
+    </div>
+</div>
+<div id="news">
+    <p></p>
+</div>
+<div class="content">
+    <div class="news">
+        <h1>Aktualności:</h1>
+        <app-news-page></app-news-page>
+    </div>
+    <div id="employess">
+        <p></p>
+    </div>
+    <div class="employess">
+        <h1>Pracownicy:</h1>
+        <app-employees></app-employees>
+    </div>
+    <div id="equipment">
+        <p></p>
+    </div>
+    <div class="equipment">
+        <h1>Sprzet:</h1>
+        <app-equipment></app-equipment>
+    </div>
+    <div id="contact">
+        <p></p>
+    </div>
+    <div class="contact">
+        <h1>Kontakt:</h1>
+        <app-contact></app-contact>
+    </div>
+
+</div>
+<app-footer></app-footer>
