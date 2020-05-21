@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { DataServiceService } from 'src/app/services/data-service.service';
+import { Equipment } from 'src/app/class/equipment/equipment';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-equipment',
@@ -10,10 +11,20 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 export class EquipmentComponent implements OnInit {
 
   constructor( private dataService:DataServiceService) { }
-
+  private subscription:Subscription;
+  public equipment:Equipment;
   ngOnInit() {
-    this.dataService.getEquipment().subscribe(res=>{});
+    this.subscription= this.dataService.getEquipment().subscribe((equipment:Equipment[])=>{
+      this.equipment=equipment[0];
+    });
   }
+
+  ngOnDestroy(): void {
+    if(this.subscription) this.subscription.unsubscribe();
+  }
+
+
+
   imageObject: Array<object> = [{
     image: 'assets/equipment/1.jpg',
     thumbImage: 'assets/equipment/1.jpg',

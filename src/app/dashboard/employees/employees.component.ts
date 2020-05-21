@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DataServiceService } from 'src/app/services/data-service.service';
-import { Worker } from 'src/app/class/worker';
+import { Worker } from 'src/app/class/worker/worker';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class EmployeesComponent implements OnInit {
   constructor(  private dataService:DataServiceService) { }
-  worker:Worker;
+  public worker:Worker;
   private workers:Worker[];
   private subscription:Subscription;
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Worker } from './worker';
+import { Worker } from './';
 
 describe('Worker', () => {
   it('should create an instance', () => {
