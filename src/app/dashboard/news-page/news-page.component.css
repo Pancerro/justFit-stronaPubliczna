@@ -1,5 +1,5 @@
 .news {
-    width: 80%;
+    width: 85%;
     margin-left: 15%;
     background-color: black;
     color: white;
@@ -8,6 +8,10 @@
 
 .news-list {
     display: flex;
+}
+
+.button-see-all {
+    margin-right: 17%;
 }
 
 @media screen and (max-width: 1620px) {
