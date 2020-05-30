@@ -1,45 +1,47 @@
-<mat-sidenav-container class="news">
+<mat-sidenav-container class="container">
     <mat-sidenav #sidenav class="sidenav">
         <p><button mat-button class="close-button" (click)="sidenav.close()">X</button></p>
-        <div *ngIf="!allMessage" class="read-more">
-            <h1>{{clickedNews.shortMessage}} {{clickedNews.date}}</h1>
-            {{clickedNews.message}}
-        </div>
-        <div *ngIf="allMessage" class="read-more">
-            <div *ngFor="let new of news">
-                <img src={{new.img}}>
-                <h1>{{new.shortMessage}}</h1>
-                <p>{{new.date}}</p>
-                <p><button class="button-nav" mat-button (click)="sideNaveOpenOneNews(new)">Wiecej</button></p>
+        <div class="news-all">
+            <div *ngIf="!allMessage">
+                <h1>{{clickedNews.shortMessage}} {{clickedNews.date}}</h1>
+                {{clickedNews.message}}
+            </div>
+            <div *ngIf="allMessage">
+                <div *ngFor="let new of news">
+                    <img src={{new.img}}>
+                    <h1>{{new.shortMessage}}</h1>
+                    <p>{{new.date}}</p>
+                    <p><button class="button-nav" mat-button (click)="sideNaveOpenOneNews(new)">Wiecej</button></p>
+                </div>
             </div>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div>
+        <div class="news">
             <div class="news-list">
                 <div class="news-list-img-0">
-                    <img src={{news[0].img}}>
+                    <p> <img src={{news[0].img}}></p>
                     <h1>{{news[0].shortMessage}}</h1>
                     <p>{{news[0].date}}</p>
-                    <p><button mat-button (click)="sideNaveOpenOneNews(news[0])">Wiecej</button></p>
+                    <p><button mat-button (click)="sideNaveOpenOneNews(news[0])">Wiecej...</button></p>
                 </div>
                 <div class="news-list-img-1">
-                    <img src={{news[1].img}}>
+                    <p> <img src={{news[1].img}}></p>
                     <h1>{{news[1].shortMessage}}</h1>
                     <p>{{news[1].date}}</p>
-                    <p><button mat-button (click)="sideNaveOpenOneNews(news[1])">Wiecej</button></p>
+                    <p><button mat-button (click)="sideNaveOpenOneNews(news[1])">Wiecej...</button></p>
                 </div>
                 <div class="news-list-img-2">
-                    <img src={{news[2].img}}>
+                    <p> <img src={{news[2].img}}></p>
                     <h1>{{news[2].shortMessage}}</h1>
                     <p>{{news[2].date}}</p>
-                    <p><button mat-button (click)="sideNaveOpenOneNews(news[2])">Wiecej</button></p>
+                    <p><button mat-button (click)="sideNaveOpenOneNews(news[2])">Wiecej...</button></p>
                 </div>
                 <div class="news-list-img-3">
-                    <img src={{news[3].img}}>
+                    <p> <img src={{news[3].img}}></p>
                     <h1>{{news[3].shortMessage}}</h1>
                     <p>{{news[3].date}}</p>
-                    <p><button mat-button (click)="sideNaveOpenOneNews(news[3])">Wiecej</button></p>
+                    <p><button mat-button (click)="sideNaveOpenOneNews(news[3])">Wiecej...</button></p>
                 </div>
 
             </div>

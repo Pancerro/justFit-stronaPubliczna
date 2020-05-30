@@ -10,14 +10,14 @@
 
 .nextWorkerButton {
     background-color: orange;
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 40px;
 }
 
 .previousWorkerButton {
     background-color: orange;
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 40px;
 }
 
 .nextWorkerButton:hover {

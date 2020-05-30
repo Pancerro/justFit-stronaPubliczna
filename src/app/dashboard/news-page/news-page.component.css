@@ -6,8 +6,17 @@
     text-align: center;
 }
 
+.container {
+    background-color: black;
+    text-align: center;
+}
+
 .news-list {
     display: flex;
+}
+
+.news-all {
+    margin-top: 50px;
 }
 
 .button-see-all {
@@ -39,10 +48,7 @@
 
 .close-button {
     float: right;
-}
-
-.read-more {
-    margin: 0, auto;
+    margin-top: -20px;
 }
 
 button:hover {

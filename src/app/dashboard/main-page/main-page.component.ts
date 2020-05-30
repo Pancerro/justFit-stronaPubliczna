@@ -14,7 +14,7 @@ export class MainPageComponent implements OnInit {
   onWindowScroll() {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (scrollOffset >= 80) {
+    if (scrollOffset >= 40) {
       document.querySelectorAll('.sticky').forEach((c) => {
         c.classList.add('scroll');
       });
