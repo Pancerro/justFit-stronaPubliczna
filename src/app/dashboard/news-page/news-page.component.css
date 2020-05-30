@@ -6,6 +6,12 @@
     text-align: center;
 }
 
+@media screen and (max-width: 620px) {
+    .news {
+        margin-left: 5%;
+    }
+}
+
 .container {
     background-color: black;
     text-align: center;
