@@ -20,6 +20,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { DataServiceService } from './services/data-service.service'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
+import { DataprivacyComponent } from './menu/dataprivacy/dataprivacy.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MainPageComponent } from './dashboard/main-page/main-page.component';
     NewsPageComponent,
     ContactComponent,
     FooterComponent,
-    MainPageComponent
+    MainPageComponent,
+    DataprivacyComponent
   ],
   imports: [
     BrowserModule,

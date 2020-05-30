@@ -9,11 +9,9 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class ActivitiesComponent implements OnInit {
 
-  constructor(private titleService:Title,
-    private dataService:DataServiceService) { }
+  constructor(private dataService:DataServiceService) { }
 
   ngOnInit() {
-    this.titleService.setTitle("JF_Zajęcia");
     this.dataService.getActivities().subscribe(res=>{});
   }
 

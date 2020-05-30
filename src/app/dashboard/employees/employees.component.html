@@ -1,17 +1,17 @@
 <div class="employees">
     <h4>Nasza druzyna</h4>
     <h1>
-        <button class="previousWorkerButton" (click)="previousWorker(worker.getId())" mat-button>	<mat-icon>arrow_left</mat-icon></button> {{worker?.getFirstName()}} {{worker?.getSurname()}}
-        <button class="nextWorkerButton" (click)="nextWorker(worker.getId())" mat-button><mat-icon>arrow_right</mat-icon></button>
+        <button class="previousWorkerButton" (click)="previousWorker(worker?.id)" mat-button>	<mat-icon>arrow_left</mat-icon></button> {{worker?.firstName}} {{worker?.surName}}
+        <button class="nextWorkerButton" (click)="nextWorker(worker?.id)" mat-button><mat-icon>arrow_right</mat-icon></button>
     </h1>
     <br>
-    <p>Specjalizajca: {{worker?.getSpecialization()}}</p>
+    <p>Specjalizajca: {{worker?.specialization}}</p>
     <br>
-    <p>Email: {{worker?.getEmail()}}</p>
+    <p>Email: {{worker?.email}}</p>
     <br>
-    <p>Numer Telefonu: {{worker?.getNumber()}}</p>
+    <p>Numer Telefonu: {{worker?.phoneNumber}}</p>
     <br>
-    <p>Godziny pracy: {{worker?.getWorkingHour()}}</p>
+    <p>Godziny pracy: {{worker?.workingHours}}</p>
 
 
 

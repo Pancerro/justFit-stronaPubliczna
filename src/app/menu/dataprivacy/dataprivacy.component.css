@@ -1,0 +1,19 @@
+.container {
+    background-color: white;
+    color: black;
+}
+
+.container-margin {
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+a {
+    color: blue;
+}
+
+.logo {
+    background-color: black;
+    color: white;
+    border-bottom: 5px solid orange;
+}

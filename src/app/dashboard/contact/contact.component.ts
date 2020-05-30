@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,12 +9,14 @@ import { Router } from '@angular/router';
 export class ContactComponent implements OnInit {
 
   constructor(private router: Router) { }
-    col:number=5;
+  public col:number=10;
   ngOnInit() {
-    if(window.innerWidth<900) this.col=2;
   }
-
   welcomePage():void{
     this.router.navigate(['/strona-głowna']);
    }
+  onResize(event: { target: { innerWidth: any; }; }) {
+    if(event.target.innerWidth<900) this.col=2
+    else this.col=10;
+  }
 }

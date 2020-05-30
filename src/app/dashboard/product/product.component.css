@@ -1,0 +1,49 @@
+.product-name::before {
+    background-image: url('/assets/product-icon.png');
+    background-size: 100px 100px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    content: "";
+}
+
+.product {
+    border: 2px solid orange;
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: 200px;
+    margin-left: 20%;
+}
+
+@media screen and (max-width: 850px) {}
+
+.product:hover {
+    color: white;
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background: orange;
+    color: white;
+    height: 80px;
+    width: 100px;
+}
+
+button::before {
+    background-image: url('/assets/dumbbell-icon.png');
+    background-size: 30px 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "";
+}
+
+button:hover {
+    cursor: pointer;
+}

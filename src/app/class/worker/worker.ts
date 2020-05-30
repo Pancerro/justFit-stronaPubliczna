@@ -1,13 +1,13 @@
 export class Worker {
-    private id: number;
-    private firstName: string;
-    private surName: string;
-    private email: string;
+    public id: number;
+    public firstName: string;
+    public surName: string;
+    public email: string;
     private username: string;
     private password: string;
-    private phoneNumber: string;
-    private specialization: string;
-    private workingHours: string;
+    public phoneNumber: string;
+    public specialization: string;
+    public workingHours: string;
     constructor(id: number, firstName: string, surName: string, email: string, username: string, password: string, phoneNumber: string, specialization: string, workingHours: string) {
         this.id = id;
         this.firstName = firstName;
@@ -18,26 +18,5 @@ export class Worker {
         this.phoneNumber = phoneNumber;
         this.specialization = specialization;
         this.workingHours = workingHours;
-    }
-    public getId():number {
-        return this.id;
-    }
-    public getFirstName():string {
-        return this.firstName;
-    }
-    public getSurname():string {
-        return this.surName;
-    }
-    public getEmail():string {
-        return this.email;
-    }
-    public getNumber():string {
-        return this.phoneNumber;
-    }
-    public getSpecialization():string {
-        return this.specialization;
-    }
-    public getWorkingHour():string {
-        return this.workingHours;
     }
 }

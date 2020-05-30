@@ -1,12 +1,9 @@
-<div class="contact">
-    <mat-grid-list cols="3" rowHeight="{{col}}:1">
+<div class="contact" (window:resize)="onResize($event)">
+    <mat-grid-list cols="2" rowHeight="{{col}}:1">
         <mat-grid-tile>
             <div class="logo"> <button mat-button (click)="welcomePage()"> <h1>JUST_FIT</h1></button></div>
             <p>
                 <mat-icon>alternate_email</mat-icon><a href="mailto:biuro@justfit.pl">biuro@justfit.pl</a><br></p>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <p>Klub</p>
         </mat-grid-tile>
         <mat-grid-tile>
             <p>ŚLEDZ NAS W INTERNECIE</p>
@@ -15,8 +12,6 @@
             <p>
                 <mat-icon> location_on</mat-icon> JustFit /Gdynia, ul.Tyskowska 4</p>
         </mat-grid-tile>
-        <mat-grid-tile><a href="strona-głowna">Strona Główna</a>
-        </mat-grid-tile>
         <mat-grid-tile>
             <a href="https://www.facebook.com/"><img src="assets/fb.png"></a>
         </mat-grid-tile>
@@ -24,16 +19,12 @@
             <p>
                 <mat-icon>av_timer</mat-icon>Godziny otwarcia (PN-PT) 6.00-24.00 (SO-ND) 7.00-22.00</p>
         </mat-grid-tile>
-        <mat-grid-tile><a href="pracownicy">Pracownicy</a>
-        </mat-grid-tile>
         <mat-grid-tile>
             <a href="https://www.instagram.com/"><img src="assets/insta.png"></a>
         </mat-grid-tile>
         <mat-grid-tile>
             <p>
                 <mat-icon> phone</mat-icon> Telefon XXX XXX XXX</p>
-        </mat-grid-tile>
-        <mat-grid-tile><a href="oferta">Oferta</a>
         </mat-grid-tile>
     </mat-grid-list>
 </div>

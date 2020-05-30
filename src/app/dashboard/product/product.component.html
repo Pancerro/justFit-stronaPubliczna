@@ -1,3 +1,32 @@
-<div>
-    <p> Produkt :{{product?.name}} {{product?.description}} {{product?.price}} {{product?.durationInMonths}} {{product?.active}}</p>
+<div class="container">
+    <div class="product" *ngFor="let product of products">
+        <div *ngIf="product?.active">
+
+            <mat-grid-list cols="3" rowHeight="2:1">
+                <mat-grid-tile>
+                    <h1 class="product-name">{{product?.name}}</h1>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <ul>
+                        <li>
+                            <mat-icon>check_circle</mat-icon>Cena: {{product?.price}} </li>
+                        <li>
+                            <mat-icon>check_circle</mat-icon>Czas trwania umowy: {{product?.durationInMonths}}</li>
+                        <li>
+                            <mat-icon>check_circle</mat-icon>Opis: {{product?.description}}</li>
+                        <li>
+                            <mat-icon>check_circle</mat-icon>Typ oferty: {{product?.avabileClasses}}</li>
+                        <li *ngIf="product?.contract">
+                            <mat-icon>check_circle</mat-icon>Kontrakt: Tak</li>
+                        <li *ngIf="!product?.contract">
+                            <mat-icon>check_circle</mat-icon>Kontrakt: Nie</li>
+                    </ul>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <button>KUP KARNET</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
 </div>
