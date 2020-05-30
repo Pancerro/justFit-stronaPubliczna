@@ -10,7 +10,7 @@
                 <img src={{new.img}}>
                 <h1>{{new.shortMessage}}</h1>
                 <p>{{new.date}}</p>
-                <p><button mat-button (click)="sideNaveOpenOneNews(new)">Wiecej</button></p>
+                <p><button class="button-nav" mat-button (click)="sideNaveOpenOneNews(new)">Wiecej</button></p>
             </div>
         </div>
     </mat-sidenav>
@@ -41,12 +41,7 @@
                     <p>{{news[3].date}}</p>
                     <p><button mat-button (click)="sideNaveOpenOneNews(news[3])">Wiecej</button></p>
                 </div>
-                <div class="news-list-img-4">
-                    <img src={{news[4].img}}>
-                    <h1>{{news[4].shortMessage}}</h1>
-                    <p>{{news[4].date}}</p>
-                    <p><button mat-button (click)="sideNaveOpenOneNews(news[4])">Wiecej</button></p>
-                </div>
+
             </div>
             <button mat-button (click)="sideNaveOpenAllNews()">Zobacz wszystko</button>
 

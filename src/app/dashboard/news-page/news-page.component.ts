@@ -1,5 +1,4 @@
 import { Component, OnInit , ViewChild} from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import {MatSidenav} from '@angular/material/sidenav';
 export class News {
     img:string;
@@ -23,16 +22,16 @@ export class News {
 
 
 export class NewsPageComponent implements OnInit {
-  news:News[]=[];
-  clickedNews:News=new News("","","","");
-  sizeNews:number=5;
+  public news:News[]=[];
+  public clickedNews:News=new News("","","","");
+  public sizeNews:number=4;
   @ViewChild('sidenav',null) sidenav: MatSidenav;
-  allMessage:boolean
+  public allMessage:boolean
   constructor() { }
 
   ngOnInit() {
     for(let i=0;i<this.sizeNews;i++){
-      this.news.push(new News("assets/komunikat.png","Awaria","1/1/1","Drdzy przyjaciele"))
+      this.news.push(new News("assets/komunikat.png","Awaria","1/1/1","Drodzy przyjaciele"))
     }
   }
   sideNaveOpenOneNews(news:News){

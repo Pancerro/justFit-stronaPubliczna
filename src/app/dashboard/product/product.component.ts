@@ -9,20 +9,68 @@ import { Product } from 'src/app/class/product/product';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  private subscription:Subscription;
-  public products:Product[];
-
-  constructor(private dataService:DataServiceService) { }
-
-  ngOnInit() {
-    this.subscription=this.dataService.getProduct().subscribe((product:Product[])=>{
-      console.log(product)
-      this.products=product;
-      this.products.push(product[0])
+  private subscription: Subscription;
+  public products: Product[];
+  public col: number = 3;
+  public row: number = 2;
+  public colButton: number = 1;
+  constructor(private dataService: DataServiceService) { }
+  public ngOnInit(): void {
+    this.subscription = this.dataService.getProduct().subscribe((product: Product[]) => {
+      this.products = product;
     })
-
+    if (window.innerWidth < 640) {
+      this.col = 1;
+      this.row = 3
+      this.colButton = 1
+    }
+    else {
+      if (window.innerWidth < 1400) {
+        if (window.innerWidth < 1040) {
+          this.col = 2;
+          this.row = 1.5;
+          this.colButton = 2
+        }
+        else {
+          this.col = 2;
+          this.row = 2;
+          this.colButton = 2
+        }
+      }
+      else {
+        this.col = 3;
+        this.row = 2;
+        this.colButton = 1
+      }
+    }
   }
-  ngOnDestroy() {
-    if(this.subscription) this.subscription.unsubscribe();
+  public ngOnDestroy() {
+    if (this.subscription) this.subscription.unsubscribe();
+  }
+  public onResize(event: { target: { innerWidth: any; }; }) {
+    if (event.target.innerWidth < 640) {
+      this.col = 1;
+      this.row = 3
+      this.colButton = 1
+    }
+    else {
+      if (event.target.innerWidth < 1400) {
+        if (event.target.innerWidth < 1040) {
+          this.col = 2;
+          this.row = 1.5;
+          this.colButton = 2
+        }
+        else {
+          this.col = 2;
+          this.row = 2;
+          this.colButton = 2
+        }
+      }
+      else {
+        this.col = 3;
+        this.row = 2;
+        this.colButton = 1
+      }
+    }
   }
 }

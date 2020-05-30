@@ -10,12 +10,15 @@ export class ContactComponent implements OnInit {
 
   constructor(private router: Router) { }
   public col:number=10;
-  ngOnInit() {
+  public ngOnInit() {
+    if(window.innerWidth<900) this.col=2
+    else this.col=10;
+
   }
-  welcomePage():void{
+  public welcomePage():void{
     this.router.navigate(['/strona-głowna']);
    }
-  onResize(event: { target: { innerWidth: any; }; }) {
+  public onResize(event: { target: { innerWidth: any; }; }) {
     if(event.target.innerWidth<900) this.col=2
     else this.col=10;
   }

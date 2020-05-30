@@ -10,10 +10,10 @@ export class FooterComponent implements OnInit {
   constructor( private router: Router) { }
   ngOnInit() {
   }
-  welcomePage():void{
+  public welcomePage():void{
     this.router.navigate(['/strona-głowna']);
    }
-   privacy():void{
+  public privacy():void{
     this.router.navigate(['/dataprivacy']);
    }
 }

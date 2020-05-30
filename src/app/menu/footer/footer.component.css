@@ -9,3 +9,8 @@
     border: none;
     background-color: orange;
 }
+
+.privacy:hover {
+    color: white;
+    cursor: pointer;
+}

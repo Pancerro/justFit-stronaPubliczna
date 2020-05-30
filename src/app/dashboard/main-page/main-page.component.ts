@@ -65,7 +65,7 @@ export class MainPageComponent implements OnInit {
     this.scroll(x);
   }
   product(): void {
-    var x = document.getElementById("news");
+    var x = document.getElementById("product");
     this.scroll(x);
   }
   contact(): void {

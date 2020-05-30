@@ -46,6 +46,11 @@
 .news {
     margin-top: 25px;
     height: auto;
+    text-align: initial;
+}
+
+.news-h1 {
+    text-align: center;
 }
 
 .employess {

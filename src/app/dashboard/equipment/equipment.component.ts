@@ -10,104 +10,29 @@ import { Subscription } from 'rxjs';
 })
 export class EquipmentComponent implements OnInit {
 
-  constructor( private dataService:DataServiceService) { }
-  private subscription:Subscription;
-  public equipment:Equipment;
-  ngOnInit() {
-    this.subscription= this.dataService.getEquipment().subscribe((equipment:Equipment[])=>{
-      this.equipment=equipment[0];
+  constructor(private dataService: DataServiceService) { }
+  private subscription: Subscription;
+  public equipment: Equipment[];
+  public imageObject: Array<{ image: string, thumbImage: string, alt: string, title: string }> = []
+  public ngOnInit() {
+    this.subscription = this.dataService.getEquipment().subscribe((equipment: Equipment[]) => {
+      for (let eq of equipment) {
+        if (eq.availability) {
+          if (!eq.broken) {
+            this.imageObject.push({
+              image: 'assets/equipment/1.jpg',
+              thumbImage: 'assets/equipment/1.jpg',
+              alt: eq.specification,
+              title: eq.equipmentName + " - " + eq.specification
+            })
+          }
+        }
+      }
     });
   }
-
-  ngOnDestroy(): void {
-    if(this.subscription) this.subscription.unsubscribe();
+  public ngOnDestroy(): void {
+    if (this.subscription) this.subscription.unsubscribe();
   }
 
-
-
-  imageObject: Array<object> = [{
-    image: 'assets/equipment/1.jpg',
-    thumbImage: 'assets/equipment/1.jpg',
-    alt: 'JustFit',
-    title: 'JustFit'
-},
-{
-  image: 'assets/equipment/2.jpg',
-  thumbImage: 'assets/equipment/2.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/3.jpg',
-  thumbImage: 'assets/equipment/3.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/4.jpg',
-  thumbImage: 'assets/equipment/4.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/5.jpg',
-  thumbImage: 'assets/equipment/5.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/6.jpg',
-  thumbImage: 'assets/equipment/6.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/7.jpg',
-  thumbImage: 'assets/equipment/7.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/8.jpg',
-  thumbImage: 'assets/equipment/8.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/9.jpg',
-  thumbImage: 'assets/equipment/9.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/3.jpg',
-  thumbImage: 'assets/equipment/3.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/4.jpg',
-  thumbImage: 'assets/equipment/4.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/5.jpg',
-  thumbImage: 'assets/equipment/5.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/6.jpg',
-  thumbImage: 'assets/equipment/6.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/7.jpg',
-  thumbImage: 'assets/equipment/7.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/8.jpg',
-  thumbImage: 'assets/equipment/8.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-},{
-  image: 'assets/equipment/9.jpg',
-  thumbImage: 'assets/equipment/9.jpg',
-  alt: 'JustFit',
-  title: 'JustFit'
-}
-
-];
 
 }

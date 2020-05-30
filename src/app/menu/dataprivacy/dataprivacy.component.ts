@@ -12,7 +12,7 @@ export class DataprivacyComponent implements OnInit {
 
   ngOnInit() {
   }
-  welcomePage():void{
+  public welcomePage():void{
     this.router.navigate(['']);
    }
 }

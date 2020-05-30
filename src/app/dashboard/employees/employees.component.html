@@ -4,16 +4,9 @@
         <button class="previousWorkerButton" (click)="previousWorker(worker?.id)" mat-button>	<mat-icon>arrow_left</mat-icon></button> {{worker?.firstName}} {{worker?.surName}}
         <button class="nextWorkerButton" (click)="nextWorker(worker?.id)" mat-button><mat-icon>arrow_right</mat-icon></button>
     </h1>
-    <br>
-    <p>Specjalizajca: {{worker?.specialization}}</p>
-    <br>
-    <p>Email: {{worker?.email}}</p>
-    <br>
-    <p>Numer Telefonu: {{worker?.phoneNumber}}</p>
-    <br>
-    <p>Godziny pracy: {{worker?.workingHours}}</p>
 
-
+    Specjalizajca: {{worker?.specialization}} <br> <a href="mailto:{{worker?.email}}">Email: {{worker?.email}}</a><br>
+    <a href="tel:{{worker?.phoneNumber}}">Numer Telefonu: {{worker?.phoneNumber}}</a><br> Godziny pracy: {{worker?.workingHours}}
 
 
 </div>
