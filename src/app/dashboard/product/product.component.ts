@@ -19,28 +19,35 @@ export class ProductComponent implements OnInit {
     this.subscription = this.dataService.getProduct().subscribe((product: Product[]) => {
       this.products = product;
     })
-    if (window.innerWidth < 640) {
+    if (window.innerWidth < 500) {
       this.col = 1;
-      this.row = 3
+      this.row = 2
       this.colButton = 1
     }
     else {
-      if (window.innerWidth < 1400) {
-        if (window.innerWidth < 1040) {
-          this.col = 2;
-          this.row = 1.5;
-          this.colButton = 2
-        }
-        else {
-          this.col = 2;
-          this.row = 2;
-          this.colButton = 2
-        }
+      if (window.innerWidth < 640) {
+        this.col = 1;
+        this.row = 3
+        this.colButton = 1
       }
       else {
-        this.col = 3;
-        this.row = 2;
-        this.colButton = 1
+        if (window.innerWidth < 1400) {
+          if (window.innerWidth < 1040) {
+            this.col = 2;
+            this.row = 1.5;
+            this.colButton = 2
+          }
+          else {
+            this.col = 2;
+            this.row = 2;
+            this.colButton = 2;
+          }
+        }
+        else {
+          this.col = 3;
+          this.row = 2;
+          this.colButton = 1;
+        }
       }
     }
   }
@@ -48,28 +55,35 @@ export class ProductComponent implements OnInit {
     if (this.subscription) this.subscription.unsubscribe();
   }
   public onResize(event: { target: { innerWidth: any; }; }) {
-    if (event.target.innerWidth < 640) {
+    if (window.innerWidth < 500) {
       this.col = 1;
-      this.row = 3
-      this.colButton = 1
+      this.row = 2;
+      this.colButton = 1;
     }
     else {
-      if (event.target.innerWidth < 1400) {
-        if (event.target.innerWidth < 1040) {
-          this.col = 2;
-          this.row = 1.5;
-          this.colButton = 2
-        }
-        else {
-          this.col = 2;
-          this.row = 2;
-          this.colButton = 2
-        }
+      if (event.target.innerWidth < 640) {
+        this.col = 1;
+        this.row = 3;
+        this.colButton = 1;
       }
       else {
-        this.col = 3;
-        this.row = 2;
-        this.colButton = 1
+        if (event.target.innerWidth < 1400) {
+          if (event.target.innerWidth < 1040) {
+            this.col = 2;
+            this.row = 1.5;
+            this.colButton = 2
+          }
+          else {
+            this.col = 2;
+            this.row = 2;
+            this.colButton = 2;
+          }
+        }
+        else {
+          this.col = 3;
+          this.row = 2;
+          this.colButton = 1;
+        }
       }
     }
   }
