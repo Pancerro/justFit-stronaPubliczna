@@ -1,30 +1,16 @@
-.photo {
-    width: 100%;
-    height: auto;
-}
-
 .employees {
     margin-top: 50px;
     text-align: center;
 }
 
-.nextWorkerButton {
+Button {
     background-color: orange;
     width: 50px;
     height: 40px;
+    margin: 10px;
 }
 
-.previousWorkerButton {
-    background-color: orange;
-    width: 50px;
-    height: 40px;
-}
-
-.nextWorkerButton:hover {
-    border: 2px solid yellow;
-}
-
-.previousWorkerButton:hover {
+Button:hover {
     border: 2px solid yellow;
 }
 

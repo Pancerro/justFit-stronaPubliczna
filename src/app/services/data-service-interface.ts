@@ -4,7 +4,7 @@ import { Worker } from '../class/worker/worker';
 import { Equipment } from '../class/equipment/equipment';
 
 export interface DataServiceInterface {
-    getActivities(): Observable<String[]>;
+  //  getActivities(): Observable<String[]>;
     getEmployess(): Observable<Worker[]>;
     getEquipment(): Observable<Equipment[]>;
     getProduct(): Observable<Product[]>;

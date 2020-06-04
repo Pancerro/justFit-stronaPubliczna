@@ -1,0 +1,80 @@
+.container-sidenav {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav {
+    width: 100%;
+    background-color: orange;
+    text-align: left;
+    padding-left: 100px;
+}
+
+@media screen and (max-width: 850px) {
+    .sidenav {
+        padding-left: 25px;
+    }
+}
+
+ul:first-of-type {
+    text-decoration: underline;
+    list-style-type: none;
+    color: red;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        overflow: scroll;
+    }
+}
+
+.activities-content {
+    text-align: center;
+}
+
+.img-content {
+    position: relative;
+}
+
+.text-box {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.img-content:hover+.button,
+.button:hover {
+    display: inline-block;
+}
+
+.button {
+    margin-top: -5px;
+    background-color: orange;
+    color: black;
+    border: white 1px solid;
+    width: 320px;
+    display: none;
+    height: 50px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.close-button {
+    float: right;
+    margin-top: -20px;
+}
+
+.close-button:hover {
+    color: red;
+}

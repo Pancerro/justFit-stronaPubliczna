@@ -12,7 +12,9 @@ export class EquipmentComponent implements OnInit {
 
   constructor(private dataService: DataServiceService) { }
   private subscription: Subscription;
-  public equipment: Equipment[];
+  public buttonText = "Rozwiń...";
+  private show: Boolean = true;
+  public statusClass: string = "description";
   public imageObject: Array<{ image: string, thumbImage: string, alt: string, title: string }> = []
   public ngOnInit() {
     this.subscription = this.dataService.getEquipment().subscribe((equipment: Equipment[]) => {
@@ -29,6 +31,19 @@ export class EquipmentComponent implements OnInit {
         }
       }
     });
+  }
+  public showText(): void {
+    if (this.show) {
+      this.statusClass = "show";
+      this.buttonText = "Zwiń...";
+      this.show = false;
+    }
+    else {
+      this.statusClass = "description";
+      this.buttonText = "Rozwiń...";
+      this.show = true;
+    }
+
   }
   public ngOnDestroy(): void {
     if (this.subscription) this.subscription.unsubscribe();

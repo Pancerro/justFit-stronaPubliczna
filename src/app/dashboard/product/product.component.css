@@ -84,6 +84,8 @@
 
 button:hover {
     border: 1px solid white;
+    background-color: yellow;
+    color: black;
 }
 
 .product:hover {

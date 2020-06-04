@@ -1,7 +1,7 @@
 <div class="equipment">
     <ng-image-slider [images]="imageObject" #nav></ng-image-slider>
 </div>
-<div class="description">
+<div class="description" [ngClass]="statusClass">
     <h1>SIŁOWNIA JUST_FIT</h1>
     Klub mieści się na pierwszym piętrze budynku apartamentowca Transatlantyk, w ścisłym centrum. Dzięki dogodnej lokalizacji w samym centrum miasta można dojechać do klubu różnymi środkami komunikacji miejskiej. To miejsce dla wszystkich, którzy uwielbiają
     aktywność fizyczną i jednocześnie lubią spędzać czas w pozytywnej atmosferze, wśród ciekawych ludzi. Klimatyzowana sala o powierzchni około 800 metrów kwadratowych podzielona jest na strefę cardio, siłową oraz salę fitness. Wyposażenie w sprzęt firmy
@@ -9,3 +9,5 @@
     oraz ergometr wioślarski, dzięki czemu rozgrzewka nigdy nie będzie nudna. Po treningu, w ramach relaksu, warto skorzystać z usytuowanej w szatni sauny suchej. Wszystkich fanów zajęć grupowych zapraszamy na urozmaicone zajęcia fitness. W naszej ofercie
     znajdziecie zarówno zajęcia przeznaczone dla osób początkujących, jak i dla tych bardziej zaawansowanych. Nasi trenerzy czuwają nad bezpieczeństwem i efektywnością treningu jednocześnie pokazując jak prawidłowo wykonywać ćwiczenia i motywując do wysiłku.
 </div>
+<br>
+<button (click)="showText()">{{buttonText}}</button>

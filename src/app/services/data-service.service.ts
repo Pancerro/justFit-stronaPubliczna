@@ -10,15 +10,16 @@ import { Equipment } from '../class/equipment/equipment';
   providedIn: 'root'
 })
 export class DataServiceService implements DataServiceInterface{
-  private activitiesUrl:string="localhost:3000/activities";
+  //private activitiesUrl:string="localhost:3000/activities";
   private employessUrl:string="https://worker-api-175ic-a2.herokuapp.com/getWorkersList";
   private equipmentUrl:string="https://justfitequipmentcatalog.herokuapp.com/justfit/equipment/getAll";
   private productUrl:string="https://justfit-products.herokuapp.com/products";
   constructor(private http:HttpClient) {}
 
-  public getActivities():Observable<String[]>{
+  /*public getActivities():Observable<String[]>{
     return this.http.get<String[]>(this.activitiesUrl);
   }
+  */
   public getEmployess():Observable<Worker[]>{
     return this.http.get<Worker[]>(this.employessUrl);
   }

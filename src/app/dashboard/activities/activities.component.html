@@ -1,0 +1,57 @@
+<mat-sidenav-container class="container-sidenav">
+    <mat-sidenav #sidenav class="sidenav">
+
+        <p><button mat-button class="close-button" (click)="sidenav.close()">X</button></p>
+        <h1>{{info?.title}}</h1>
+        <hr>
+        <p>{{info?.message}}</p>
+
+        <ul *ngFor="let list of info?.list">
+            <li>{{list}}</li>
+        </ul>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="container">
+            <div class="activities-content">
+                <div class="img-content">
+                    <img src="assets\activities\o1.png">
+                    <div class="text-box">
+                        <h1>Fitness</h1>
+                    </div>
+                </div>
+                <button class="button" (click)="sideNaveOpenOneInfo(1)">WCHODZE!</button>
+            </div>
+            <div class="activities-content">
+                <div class="img-content">
+                    <img src="assets\activities\o2.png">
+                    <div class="text-box">
+                        <h1> Siłownia</h1>
+                    </div>
+                </div>
+                <button class="button" (click)="sideNaveOpenOneInfo(2)">WCHODZE!</button>
+            </div>
+            <div class="activities-content">
+                <div class="img-content">
+                    <img src="assets\activities\o3.png">
+                    <div class="text-box">
+                        <h1> Trenning Personalny</h1>
+                    </div>
+                </div>
+                <button class="button" (click)="sideNaveOpenOneInfo(3)">WCHODZE!</button>
+            </div>
+            <div class="activities-content">
+                <div class="img-content">
+                    <img src="assets\activities\o4.png">
+                    <div class="text-box">
+                        <h1> Sauna</h1>
+                    </div>
+                </div>
+                <button class="button" (click)="sideNaveOpenOneInfo(4)">WCHODZE!</button>
+            </div>
+
+
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

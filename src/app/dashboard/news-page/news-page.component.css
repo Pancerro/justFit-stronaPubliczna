@@ -1,15 +1,8 @@
 .news {
-    width: 85%;
-    margin-left: 15%;
+    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
-}
-
-@media screen and (max-width: 620px) {
-    .news {
-        margin-left: 5%;
-    }
 }
 
 .container {
@@ -19,14 +12,14 @@
 
 .news-list {
     display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .news-all {
     margin-top: 50px;
-}
-
-.button-see-all {
-    margin-right: 17%;
 }
 
 @media screen and (max-width: 1620px) {

@@ -49,11 +49,11 @@ export class MainPageComponent implements OnInit {
     el.scrollIntoView();
   }
   welcomePage(): void {
-    var x = document.getElementById("page");
+    var x = document.getElementById("news");
     this.scroll(x);
   }
   activities(): void {
-    var x = document.getElementById("news");
+    var x = document.getElementById("activities");
     this.scroll(x);
   }
   employees(): void {

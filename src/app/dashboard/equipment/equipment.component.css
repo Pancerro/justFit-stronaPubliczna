@@ -6,6 +6,34 @@
 
 .description {
     width: 60%;
+    height: 250px;
+    overflow: hidden;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.show {
+    width: 60%;
+    height: 250px;
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: visible;
+    height: auto;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: orange;
+}
+
+@media screen and (min-width: 1745px) {
+    button {
+        display: none;
+    }
 }

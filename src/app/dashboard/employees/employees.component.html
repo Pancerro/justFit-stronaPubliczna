@@ -1,12 +1,9 @@
 <div class="employees">
     <h4>Nasza druzyna</h4>
-    <h1>
-        <button class="previousWorkerButton" (click)="previousWorker(worker?.id)" mat-button>	<mat-icon>arrow_left</mat-icon></button> {{worker?.firstName}} {{worker?.surName}}
-        <button class="nextWorkerButton" (click)="nextWorker(worker?.id)" mat-button><mat-icon>arrow_right</mat-icon></button>
-    </h1>
-
+    <h1> {{worker?.id}}. {{worker?.firstName}} {{worker?.surName}}</h1>
     Specjalizajca: {{worker?.specialization}} <br> <a href="mailto:{{worker?.email}}">Email: {{worker?.email}}</a><br>
     <a href="tel:{{worker?.phoneNumber}}">Numer Telefonu: {{worker?.phoneNumber}}</a><br> Godziny pracy: {{worker?.workingHours}}
-
+    <div> <button class="previousWorkerButton" (click)="previousWorker(worker?.id)" mat-button>	<mat-icon>arrow_left</mat-icon></button>
+        <button class="nextWorkerButton" (click)="nextWorker(worker?.id)" mat-button><mat-icon>arrow_right</mat-icon></button> </div>
 
 </div>
