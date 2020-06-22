@@ -10,7 +10,6 @@ export class FooterComponent implements OnInit {
   constructor( private router: Router) { }
   public heigth:number=12;
   ngOnInit() {
-    console.log(window.innerWidth)
     if(window.innerWidth<590) this.heigth=4;
     else this.heigth=12;
 

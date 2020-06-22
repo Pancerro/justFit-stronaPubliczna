@@ -5,7 +5,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './menu/menu/menu.component';
 import { EmployeesComponent } from './dashboard/employees/employees.component';
 import { EquipmentComponent } from './dashboard/equipment/equipment.component';
 import { ProductComponent } from './dashboard/product/product.component';
@@ -25,7 +24,7 @@ import { DataprivacyComponent } from './menu/dataprivacy/dataprivacy.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+
     EmployeesComponent,
     EquipmentComponent,
     ProductComponent,

@@ -10,14 +10,17 @@ import { Product } from 'src/app/class/product/product';
 })
 export class ProductComponent implements OnInit {
   private subscription: Subscription;
-  public products: Product[];
+  public products: Product[]=[];
   public col: number = 3;
   public row: number = 2;
   public colButton: number = 1;
   constructor(private dataService: DataServiceService) { }
   public ngOnInit(): void {
     this.subscription = this.dataService.getProduct().subscribe((product: Product[]) => {
-      this.products = product;
+      for(let products of product){
+        if(products.active) this.products.push(products);
+      }
+
     })
     if (window.innerWidth < 500) {
       this.col = 1;

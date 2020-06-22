@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
 import { DataprivacyComponent } from './menu/dataprivacy/dataprivacy.component';
 
@@ -7,11 +7,15 @@ import { DataprivacyComponent } from './menu/dataprivacy/dataprivacy.component';
 const routes: Routes = [
   { path: '', redirectTo: '/strona-głowna', pathMatch: 'full'},
   {path: 'strona-głowna', component: MainPageComponent},
-  {path: 'dataprivacy', component: DataprivacyComponent}
+  {path: 'dataprivacy', component: DataprivacyComponent},
   ];
-
+  const routerOptions: ExtraOptions = {
+    useHash: true,
+    anchorScrolling: 'enabled',
+    // ...any other options you'd like to use
+  };
 @NgModule({
-  imports: [RouterModule.forRoot(routes , {useHash: true})],
+  imports: [RouterModule.forRoot(routes ,routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

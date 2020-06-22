@@ -23,10 +23,6 @@
         margin-left: 13%;
         margin-right: 20%;
     }
-    .button {
-        width: 200px;
-        height: 95px;
-    }
 }
 
 @media screen and (min-width: 300px) {
@@ -36,10 +32,6 @@
         margin-left: 13%;
         margin-right: 20%;
     }
-    .button {
-        width: 100px;
-        height: 50px;
-    }
 }
 
 @media screen and (min-width: 1040px) {
@@ -48,49 +40,17 @@
         height: 350px;
         width: 60%;
     }
-    .button {
-        width: 150px;
-        height: 95px;
-    }
 }
 
-@media screen and (min-width: 1300px) {
-    .button {
-        width: 150px;
-        height: 80px;
-    }
-}
-
-@media screen and (min-width: 1340px) {
-    .button {
-        width: 150px;
-        height: 70px;
-    }
-}
-
-@media screen and (min-width: 1360px) {
-    .button {
-        width: 150px;
-        height: 60px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    .button {
-        width: 150px;
-        height: 80px;
-    }
-}
-
-button:hover {
+.button:hover {
     border: 1px solid white;
     background-color: yellow;
     color: black;
+    font-weight: bold;
 }
 
 .product:hover {
-    color: white;
-    background-color: black;
+    background-image: url('/assets/product.jpg');
 }
 
 ul {
@@ -98,23 +58,28 @@ ul {
     overflow: hidden;
 }
 
-button {
+.button {
+    padding: 10px;
     border: none;
     background: orange;
     color: white;
-    height: 80px;
-    width: 100px;
+    height: auto;
+    width: 130px;
+    text-align: center;
 }
 
-button::before {
+.button::after {
     background-image: url('/assets/dumbbell-icon.png');
     background-size: 30px 30px;
-    display: inline-block;
+    display: block;
+    margin-left: 50px;
+    text-align: center;
     width: 30px;
     height: 30px;
     content: "";
 }
 
-button:hover {
+.button:hover {
     cursor: pointer;
+    text-decoration: none;
 }

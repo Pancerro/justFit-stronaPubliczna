@@ -63,6 +63,7 @@ ul:first-of-type {
     width: 320px;
     display: none;
     height: 50px;
+    font-weight: bold;
 }
 
 .button:hover {
