@@ -29,7 +29,6 @@ export class ActivitiesComponent implements OnInit {
   public  product: any[]=["Sztuki Walki","Aerobik","Zajecia Taneczne","Sporty Siłowe"];
   @ViewChild('sidenav', null) sidenav: MatSidenav;
   ngOnInit() {   
-   
   }
   sideNaveOpenOneInfo(info: number) {
     switch (info) {
@@ -84,5 +83,7 @@ export class ActivitiesComponent implements OnInit {
     }
     this.sidenav.open()
   }
-
+  changeColorFont(){
+    document.querySelectorAll("P")
+  }
 }

@@ -9,7 +9,7 @@
 
 .product {
     border: 2px solid orange;
-    background-color: white;
+    background-color: rgb(60, 60, 60);
     color: black;
     width: 50%;
     height: 200px;
@@ -73,7 +73,9 @@
 
 .product:hover {
     background-image: url('/assets/product.jpg');
+    background-repeat: no-repeat, repeat;
     color: orange;
+    font-weight: bolder;
 }
 
 ul {
