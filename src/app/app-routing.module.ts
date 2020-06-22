@@ -12,7 +12,6 @@ const routes: Routes = [
   const routerOptions: ExtraOptions = {
     useHash: true,
     anchorScrolling: 'enabled',
-    // ...any other options you'd like to use
   };
 @NgModule({
   imports: [RouterModule.forRoot(routes ,routerOptions)],

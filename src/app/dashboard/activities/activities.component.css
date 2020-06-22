@@ -11,6 +11,12 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 1300px) {
+    .container {
+        justify-content: unset;
+    }
+}
+
 .sidenav {
     width: 100%;
     background-color: orange;
@@ -28,12 +34,6 @@ ul:first-of-type {
     text-decoration: underline;
     list-style-type: none;
     color: red;
-}
-
-@media screen and (max-width: 850px) {
-    .container {
-        overflow: scroll;
-    }
 }
 
 .activities-content {

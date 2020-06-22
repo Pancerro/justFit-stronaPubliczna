@@ -24,7 +24,6 @@ import { DataprivacyComponent } from './menu/dataprivacy/dataprivacy.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     EmployeesComponent,
     EquipmentComponent,
     ProductComponent,
