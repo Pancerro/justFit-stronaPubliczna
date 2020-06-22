@@ -25,6 +25,7 @@ export class EmployeesComponent implements OnInit {
     if(id==this.workers.length-1) id=0;
     else id++;
     this.worker=this.workers[id]
+
   }
   previousWorker(id:number){
     id=id-1;

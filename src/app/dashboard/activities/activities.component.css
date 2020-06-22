@@ -13,7 +13,38 @@
 
 @media screen and (max-width: 1300px) {
     .container {
-        justify-content: unset;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-row: auto auto;
+        grid-column-gap: 25px;
+        grid-row-gap: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container {
+        display: grid;
+        grid-template-columns: 225px 225px;
+        grid-row: auto auto;
+        grid-column-gap: 25px;
+    }
+    img {
+        width: 250px;
+    }
+    .button {
+        width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        display: inline-block;
+    }
+    img {
+        width: 350px;
+    }
+    .button {
+        width: 350px !important;
     }
 }
 

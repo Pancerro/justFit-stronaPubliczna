@@ -12,6 +12,8 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
+        <p>
+            Nasza siłownia oferuje ogrom zajeć takich jak:</p>
         <div class="container">
             <div class="activities-content">
                 <div class="img-content">
@@ -52,6 +54,12 @@
 
 
         </div>
+        <p>oraz takze:</p>
+        <div *ngFor="let activities of product">
+            <p>{{activities}}</p>
+        </div>
+        <p>o których więcej sie dowiecie u nas, na miejscu!</p>
     </mat-sidenav-content>
+
 
 </mat-sidenav-container>
