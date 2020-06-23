@@ -112,7 +112,7 @@ ul:first-of-type {
 }
 
 .other-products {
-    width: 500px;
+    width: auto;
     margin: 0 auto;
     margin-top: 10px;
 }
