@@ -34,7 +34,7 @@ export class ActivitiesComponent implements OnInit {
     switch (info) {
       case 1:
         this.info = new Info(null, null, null, []);
-        this.info.title = this.product[1];
+        this.info.title = "Fitness";
         this.info.message = "Jest to forma zajęć grupowych skierowana dowszystkich bez względu na wiek czy kondycje fizyczną. Oferowan  e formy ruchu i zestawy ćwiczeń są przyjemne, ciekawe i częstobardziej przypominają zabawę niż trening a jednocześnie mogą mieć działanie wspo  magające w przypadku różnorodnych schorzeń związanych z siedzącym trybem życia.W zależności od  typu zajęć jakie wybierzesz możesz nie tylko spalić nadmiar tkanki tłuszczowej i wyrzeźbić sylwetkę, ale też wyciszyć się, odpocząć lub wręcz przeciwnie - wyzwolić energię.";
         this.info.list.push("W ofercie znajdziesz więc:");
         this.info.list.push("zajęcia wzmacniające, które mają za zadanie poprawić twoją siłę i sprawność jednocześnie wpływając pozytywnie na wydolność organizmu;");
@@ -53,7 +53,7 @@ export class ActivitiesComponent implements OnInit {
         break;
       case 2:
         this.info = new Info(null, null, null, []);
-        this.info.title = this.product[0];
+        this.info.title = "Siłownia";
         this.info.message = "Na siłowni możesz ćwiczyć samodzielnie lub pod okiem wykwalifikowanego trenera (trening personalny).  Każda siłownia jest wyposażona w maszyny do ćwiczeń, w sprzęt cardio, oraz w strefę wolnych ciężarów.Maszyny dostępne na siłowni są zaprojektowane w taki sposób, by trening wykonywany przy ich użyciu był bezpieczny a jednocześnie efektywny. Jeśli jesteś początkującym użytkownikiem siłowni, to właśnie one będą dla Ciebie najlepsze, bo za ich pomocą nauczysz się prawidłowej postawy podczas wykonywania ćwiczeń oraz właściwych zakresów ruchów. Nie oznacza to jednak, że korzystają z nich wyłącznie początkujący. Dobrze rozpisany plan treningu wykonywanego przy użyciu różnorodnych maszyn zapewni Ci kompletny trening całego ciała.Strefa maszyn cardio, to strefa ze sprzętem umożliwiającym intensywny trening wydolnościowy. Trening cardio wpływa na spalanie tkanki tłuszczowej, poprawę wydolności organizmu oraz regulację gospodarki hormonalnej. W zależności od intensywności i długości treningu osiągniesz różne cele treningowe. Strefa wolnych ciężarów, to jedna z bardziej wymagających stref na siłowni. Tutaj możesz przeprowadzić bardzo zróżnicowany trening. Korzystając z wolnych obciążeń samodzielnie decydujesz w jakim zakresie wykonasz ruch i jaką przyjmiesz postawę, dlatego prawidłowe wykonanie treningu w tej strefie wymaga wiedzy i doświadczenia, lub wsparcia doświadczonej osoby -trenera obecnego na siłowni.";
         this.info.list.push("Czego możesz oczekiwać od trenera obecnego na siłowni?");
         this.info.list.push("Czuwa nad tym by nikt z ćwiczących nie popełniał poważnych błędów podczas wykonywanych ćwiczeń;");
@@ -64,7 +64,7 @@ export class ActivitiesComponent implements OnInit {
         break;
       case 3:
         this.info = new Info(null, null, null, []);
-        this.info.title = this.product[3];
+        this.info.title = "Trenning Personalny";
         this.info.message = "TRENING PERSONALNY (ONE FOR ONE) Forma indywidualnych zajęć pod okiem specjalisty, która daje gwarancję realizacji celu jaki sobie postawiłeś. Wystarczy ,że określisz potrzeby dotyczące własnego wyglądu i formy fizycznej a trener przygotuje program treningowy oraz dietetyczny. Będzie czuwał nad jego realizacją i dopilnuje byś osiągnął co zamierzyłeś. Nie ma skuteczniejszego i szybszego sposobu realizacji Twojego celu niż trening personalny z trenerem S4.JAK WYGLĄDA TRENING PERSONALNY? Trener przeprowadza treningi z klientem czuwając nad poprawnością i skutecznością wykonywanych ćwiczeń. Przed każdym spotkaniem z Klientem trener rozpisuje plan treningowy w taki sposób, aby ćwiczący uniknął monotonii. Trener dba też o to, żeby Klient przez cały czas był zmotywowany i pełen zapału do osiągnięcia swojej wymarzonej formy i wyglądu.INDYWIDUALNY PROGRAM TRENINGOWY Przeprowadzając rozmowę z klientem trener dobiera odpowiedni dla jego potrzeb i możliwości program treningowy – może być on realizowany w fitness klubie, na basenie lub w plenerze. Dla uzyskania szybszych efektów trener ustala indywidualną dietę i suplementację.";
         this.info.list.push("Czego możesz oczekiwać od trenera personalnego?");
         this.info.list.push("Trener osobisty dostosuje plan treningu do Twoich potrzeb i możliwości.");
@@ -77,7 +77,7 @@ export class ActivitiesComponent implements OnInit {
         break;
       case 4:
         this.info = new Info(null, null, null,[]);
-        this.info.title =  this.product[2];
+        this.info.title =  "Sauna";
         this.info.message = "Korzystanie z sauny wpływa pozytywnie na relaks oraz regenerację. Naprzemienne nagrzewanie i schładzanie ciała jest bardzo korzystne dla układu krwionośnego i wpływa pozytywnie na odporność organizmu.W saunie skóra rozgrzewa się do ok. 40 stopni Celsjusza. Wydzielany pot ma zasadniczo za zadanie obronić organizm przed przegrzaniem. Zarazem wraz z nim z organizmu wydalane są toksyny i wszelkie zanieczyszczenia skóry. Po saunie skóra jest wyraźnie oczyszczona, lepiej ukrwiona (co nadaje jej ładny koloryt), bardziej gładka.Sauna należy do znanych od wieków zabiegów fizjoterapeutycznych z wykorzystaniem ciepła. Jest przede wszystkim metodą profilaktyczną, czyli przeznaczoną dla osób zdrowych. Pomaga łagodzić wiele drobnych dolegliwości, a nawet uzupełnia leczenie konkretnych schorzeń, jednak przed skorzystaniem z jej dobrodziejstw warto skonsultować się z lekarzem. Sauna po treningu jest dobrym sposobem na relaks i szybkie odzyskanie sił – wysoka temperatura rozluźnia ciało, łagodzi bóle mięśni i stawów. Błędem jest jednak wchodzenie do rozgrzanego pomieszczenia od razu po treningu. Zaraz po nim powinniśmy zastosować ćwiczenia schładzające (cool-down) oraz uzupełnić utracone płyny. W ten sposób nasz organizm odzyska równowagę, uspokoi się, odpocznie. Dopiero wtedy możemy we właściwy sposób skorzystać z dobrodziejstw sauny.";
         break;
     }
